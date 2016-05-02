@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+version = currentVersion
+mainClassName = 'org.gradiant.fgttrainer.FGTTrainerApplication'
+
+// UTF-8 should be standard by now. So use it!
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+project.ext {
+    jerseyVersion = '2.19'
+    dropwizardVersion = '0.8.2'
+    jfinalShiroFreemarkerVersion = '0.2'
+    dropwizardGroup = 'io.dropwizard'
+    apiServerConfig = './src/main/resources/config/analytics_service.yml'
+}
+
+dependencies {
+    compile group: project.ext.get("dropwizardGroup"), name: 'dropwizard-core', version: project.ext.get("dropwizardVersion")
+    compile group: project.ext.get("dropwizardGroup"), name: 'dropwizard-views', version: project.ext.get("dropwizardVersion")
+    compile group: project.ext.get("dropwizardGroup"), name: 'dropwizard-views-freemarker', version: project.ext.get("dropwizardVersion")
+    compile group: project.ext.get("dropwizardGroup"), name: 'dropwizard-assets', version: project.ext.get("dropwizardVersion")
+    compile group: project.ext.get("dropwizardGroup"), name: 'dropwizard-jersey', version: project.ext.get("dropwizardVersion")
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+// Configure the run task to start the Dropwizard service
+run {
+    args 'server', './src/main/resources/configuration.yml'
+}

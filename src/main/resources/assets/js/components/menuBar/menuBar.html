@@ -1,0 +1,36 @@
+<div class="panel-heading">
+    <table>
+        <tr>
+            <td><img class="logo" src="/assets/img/logo.jpg" /></td>
+            <td>
+                <div class="menuBar" role="group" aria-label="...">
+                    <button ng-controller="sentimientoController" ng-click="irSentimiento()" type="button" class="btn btn-default">{{ nombre }}</button>
+                    <button ng-controller="categoriasController" ng-click="irCategorias()" type="button" class="btn btn-default">{{ nombre }}</button>
+                    <button type="button" class="btn btn-default">Entidades</button>
+                    <button ng-controller="sentimiento2Controller" ng-click="irSentimiento()" type="button" class="btn btn-default">{{ nombre }}</button>
+                    <button type="button" class="btn btn-default">Admin</button>
+                    <button ng-controller="loginController" ng-click="irLogin()" type="button" class="btn btn-default">{{ nombre }}</button>
+                </div>
+                <!-- otros tipos de menubar por si acaso
+                <div class="btn-toolbar" role="toolbar">
+                    <button class="btn btn-default">Sentimiento</button>
+                    <button class="btn btn-default-1">Categoría</button>
+                    <button class="btn btn-default-1">Entidades</button>
+                    <button class="btn btn-default-1">Sentimiento2</button>
+                    <button class="btn btn-default-1">Admin</button>
+                    <button class="btn btn-default-1">Login</button>
+                </div>
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#">Sentimiento</a>
+                        <sentimiento></sentimiento>
+                    </li>
+                    <li><a href="#">Sentimiento2</a>
+                        <sentimiento2></sentimiento2>
+                    </li>
+                </ul>
+-->
+            </td>
+        </tr>
+    </table>
+</div>

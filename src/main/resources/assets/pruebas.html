@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pruebas</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="/css/myBootstrap.css" rel="stylesheet" media="screen">
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <table>
+        <tr>
+            <td>
+                <img class="logo" src="/img/logo.jpg" /></td>
+            <td></td>
+            <td>
+                <div class="menuBar" aria-label="...">
+                    <button type="button" class="btn btn-default">Sentimiento</button>
+                    <button type="button" class="btn btn-default">Categoría</button>
+                    <button type="button" class="btn btn-default">Entidades</button>
+                    <button type="button" class="btn btn-default">Sentimiento2</button>
+                    <button type="button" class="btn btn-default">Admin</button>
+                    <button type="button" class="btn btn-default">Login</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="panel panel-info">
+        <div class="panel-heading">sentimiento</div>
+        <div class="centrar">
+            <input class="text-center" type="" id="entradaTxt" placeholder="TEXTO" readonly="readonly">
+        </div>
+        <nav>
+            <ul class="pager">
+                <li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="pager">
+                <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Back</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="panel-body" ng-controller="buscador as vm">
+            <p class="text-center">prueba ajax..........</p>
+            <br> Selecciona:
+            <select ng-model="vm.url" ng-change="vm.buscaEnRegion()">
+                <option value="http://restcountries.eu/rest/v1/region/africa">Africa</option>
+                <option value="http://restcountries.eu/rest/v1/region/europe">Europa</option>
+                <option value="http://restcountries.eu/rest/v1/region/americas">America</option>
+            </select>
+
+            <ul>
+                <p>paises: {{vm.paises.length}}</p>
+                <li ng-repeat="pais in vm.paises">
+                    País: <span>{{pais.name}}</span>, capital: {{pais.capital}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer-pers">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h1>¡Hola mundo!</h1>
+        <button type="button" class="btn btn-ttc">Guardar cambios</button>
+        <button type="button" class="btn btn-ttc">Guardar cambios</button>
+        <button type="button" class="btn btn-ttc">Guardar cambios</button>
+        <button type="button" class="btn btn-ttc">Guardar cambios</button>
+        <button type="button" class="btn btn-ttc">Guardar cambios</button>
+    </div>
+    <!-- En un móvil las columnas ocupan la mitad del dispositivo y en un 
+     ordenador ocupan la tercera parte de la anchura disponible -->
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Las columnas ocupan siempre la mitad de la pantalla, tanto en un
+     móvil como en un ordenador de escritorio -->
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+
+    <form role="form">
+        <div class="form-group">
+            <label for="ejemplo_email_1">Email</label>
+            <input type="email" class="form-control" id="ejemplo_email_1" placeholder="Introduce tu email">
+        </div>
+        <div class="form-group">
+            <label for="ejemplo_password_1">Contraseña</label>
+            <input type="password" class="form-control" id="ejemplo_password_1" placeholder="Contraseña">
+        </div>
+        <div class="form-group">
+            <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
+            <input type="file" id="ejemplo_archivo_1">
+            <p class="help-block">Ejemplo de texto de ayuda.</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Activa esta casilla
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Enviar</button>
+    </form>
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="lib/angular.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices)
+    
+    <script src="css/bootstrap-3.3.6-dist/css/bootstrap.min.css"></script>
+    -->
+</body>
+
+</html>

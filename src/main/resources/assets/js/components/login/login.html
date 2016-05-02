@@ -1,0 +1,34 @@
+<div class="centrar-little panel panel-info" ng-controller="controladorLogin as cl">
+    <div class="panel-heading text-center">Login
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <form class="login panel-body" role="form" ng-submit="cl.enviar()">
+        <table>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="email_address">Email Address</label>
+                        <!-- div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">@</span>
+                            <input type="email" class="form-control" placeholder="You e-mail" aria-describedby="sizing-addon2">
+                        </div -->
+                        <input type="email" class="form-control" id="email_address" placeholder=" You e-mail">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="password_1">Password</label>
+                        <input type="password" class="form-control" id="password_1" placeholder=" You password" ng-model="cl.fdatos.password">
+                    </div>
+                    <div>
+                        <input ng-controller="signUP" ng-click="" type="submit" class="btn btn-default-blue" value="Login" />
+                        <a class="login" href="#/signup">Crear cuenta</a>
+                    </div>
+                    <a class="container">Forgot your password?</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
